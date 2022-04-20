@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: smartlearn-courses-service
+spec:
+  selector:
+    app: smartlearn-courses
+  type: LoadBalancer 
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+      nodePort: 31520
